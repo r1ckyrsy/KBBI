@@ -1,0 +1,21 @@
+{
+	"name": "KBBI (Anywhere)",
+	"short_name": "KBBI",
+	"description": "A web extension to search for the meaning of a word, with access floating on any web page",
+	"author": "Ricky R. Syahputra",
+	"version": "0.1.0",
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	},
+	"content_scipts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": "lib/js/inject.js",
+			"css": "",
+			"run_at": "document_start",
+			"all_frames": true
+		}
+	]
+}
