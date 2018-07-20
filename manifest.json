@@ -3,7 +3,7 @@
 	"short_name": "KBBI",
 	"description": "A web extension to search for the meaning of a word, with access floating on any web page",
 	"author": "Ricky R. Syahputra",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"manifest_version": 2,
 	"permissions": [
   ],
