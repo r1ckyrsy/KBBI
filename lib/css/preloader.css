@@ -1,0 +1,99 @@
+html {
+	display: table;
+  margin: auto;
+  height: 150px;
+  transition: height .3s;
+}
+
+body {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.preloader-wrapper * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.circle-clipper .circle {
+  border-bottom-color: transparent;
+  border-left-color: inherit;
+  border-right-color: inherit;
+  border-top-color: inherit;
+  border-style: solid;
+  border-radius: 50%;
+  border-width: 3px;
+  height: 100%;
+  position: absolute;
+  width: 200%;
+}
+
+.left {
+  float: left !important;
+}
+
+.circle-clipper {
+  border-color: inherit;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 50%;
+}
+
+.spinner-layer {
+  animation: 5332ms cubic-bezier(0.4, 0, 0.2, 1) 0s infinite normal both running fill-unfill-rotate;
+  border-color: #4285F4;
+  height: 100%;
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+}
+
+.preloader-wrapper {
+  animation: 1568ms linear 0s infinite normal none running container-rotate;
+  display: inline-block;
+  height: 50px;
+  position: relative;
+  width: 50px;
+}
+
+.circle-clipper.right .circle {
+  animation: 1333ms cubic-bezier(0.4, 0, 0.2, 1) 0s infinite normal both running right-spin;
+  border-left-color: transparent;
+  left: -100%;
+  transform: rotate(-129deg);
+}
+
+.circle-clipper.left .circle {
+  animation: 1333ms cubic-bezier(0.4, 0, 0.2, 1) 0s infinite normal both running left-spin;
+  border-right-color: transparent;
+  left: 0;
+  transform: rotate(129deg);
+}
+
+@keyframes right-spin {
+  from { transform: rotate(-130deg); }
+  50%  { transform: rotate(5deg);    }
+  to   { transform: rotate(-130deg); }
+}
+
+@keyframes left-spin {
+  from { transform: rotate(130deg); }
+  50%  { transform: rotate(-5deg);  }
+  to   { transform: rotate(130deg); }
+}
+
+@keyframes container-rotate {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fill-unfill-rotate {
+  12.5% { transform: rotate(135deg);  }
+  25%   { transform: rotate(270deg);  }
+  37.5% { transform: rotate(405deg);  }
+  50%   { transform: rotate(540deg);  }
+  62.5% { transform: rotate(675deg);  }
+  75%   { transform: rotate(810deg);  }
+  87.5% { transform: rotate(945deg);  }
+  to    { transform: rotate(1080deg); }
+}
