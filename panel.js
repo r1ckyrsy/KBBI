@@ -28,7 +28,7 @@ if (window.top !== window) { // only in frames
     script.textContent = 'window.alert = window.confirm = function() {return true;}';
     document.body.appendChild(script);
 
-	}).catch(onError);
+	}, false);
 	
 }
 
